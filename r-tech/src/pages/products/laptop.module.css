@@ -1,0 +1,345 @@
+.laptopWrapper {
+    width: 100%;
+    position: relative;
+}
+
+/* Image container */
+.laptopImage {
+    position: relative;
+}
+
+/* Laptop image */
+.laptopImage img {
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+}
+
+/* FULL IMAGE OVERLAY (ROG style) */
+.heading {
+    position: absolute;
+    inset: 0;
+    /* covers full image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 10%;
+
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.3) 70%,
+            rgba(0, 0, 0, 0) 100%);
+
+    color: white;
+}
+
+/* Text styling */
+.heading h1 {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.heading p {
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.laptopProducts {
+    position: relative;
+    bottom: 5px;
+    background-color: black;
+    width: 100%;
+    padding: 80px 0;
+}
+
+/* TOP TEXT */
+.laptopText {
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.laptopText h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.laptopText p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* CARDS */
+.laptopContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.laptopCard {
+    width: 360px;
+    background: transparent;
+}
+
+/* IMAGE */
+.laptopCard img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.cardContent {
+    background: #9fa2a3;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+/* TITLE */
+.cardContent h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* PARAGRAPH */
+.cardContent p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.laptopHotProduct {
+    width: 100%;
+    padding: 80px 60px;
+    background: #ffffff;
+
+}
+
+
+.laptopHotProduct h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.hotGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+.hotPImage {
+    width: 95%;
+    height: 600px;  
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.hotPImage img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 20px;
+    object-fit: contain;
+}
+
+.hotPImage h2 {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hotPImage p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.laptopNewProduct {
+    width: 100%;
+    padding: 80px 60px;
+    background-color: #eef8f8;
+}
+
+.laptopNewProduct h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.newGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.newImage {
+    width: 90%;
+    height: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.newImage img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 30px;
+    object-fit: contain;
+}
+
+.newImage h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.newImage p {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    /* HERO IMAGE */
+    .laptopImage img {
+        height: 420px;
+        object-fit: cover;
+    }
+
+    .heading {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .heading h1 {
+        font-size: 22px;
+    }
+
+    .heading h3 {
+        font-size: 18px;
+    }
+
+    .heading p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    /* PRODUCTS TOP TEXT */
+    .laptopText h1 {
+        font-size: 28px;
+    }
+
+    .laptopText p {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    /* FEATURED CARDS */
+    .laptopContainer {
+        gap: 30px;
+    }
+
+    .laptopCard {
+        width: 90%;
+    }
+
+    .laptopCard img {
+        height: 260px;
+    }
+
+    .cardContent h2 {
+        font-size: 20px;
+    }
+
+    .cardContent p {
+        font-size: 14px;
+    }
+
+    /* HOT PRODUCTS */
+    .laptopHotProduct {
+        padding: 60px 20px;
+    }
+
+    .hotPImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .hotPImage img {
+        max-width: 220px;
+    }
+
+    .hotPImage h2 {
+        font-size: 20px;
+    }
+
+    .hotPImage p {
+        font-size: 13px;
+    }
+
+    .laptopPrice {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* NEW PRODUCTS */
+    .laptopNewProduct {
+        padding: 60px 20px;
+    }
+
+    .newImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .newImage img {
+        max-width: 220px;
+    }
+
+    .newImage h2 {
+        font-size: 20px;
+    }
+
+    .newImage p {
+        font-size: 16px;
+    }
+
+    .newLaptopPrice {
+        justify-content: center;
+        margin-left: 0;
+    }
+}

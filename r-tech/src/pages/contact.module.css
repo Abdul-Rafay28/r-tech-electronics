@@ -1,0 +1,190 @@
+.contactPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  gap: 80px;
+  padding: 120px 10%;
+  background: #f6f7f9;
+}
+
+/* LEFT TEXT */
+/* LEFT PANEL */
+.left {
+  flex: 1;
+  padding-top: 40px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(10, 15, 31, 0.08);
+  color: #0a0f1f;
+  font-size: 13px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.left h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.subText {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 14px;
+  max-width: 420px;
+}
+
+.productBox {
+  margin: 20px 0;
+  padding: 16px 18px;
+  background: #fff;
+  border-left: 4px solid #0a0f1f;
+  font-size: 15px;
+  color: #333;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.note {
+  font-size: 14px;
+  color: #666;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+
+.left p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 400px;
+  color: #444;
+}
+
+/* FORM */
+.form {
+  flex: 1;
+  background: #fff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  height: 44px;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form textarea {
+  height: auto;
+  resize: none;
+}
+
+.form input[readonly] {
+  background: #f1f1f1;
+  color: #555;
+}
+
+.form button {
+  margin-top: 10px;
+  height: 46px;
+  border: none;
+  border-radius: 8px;
+  background: #0a0f1f;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+
+  /* MAIN LAYOUT */
+  .contactPage {
+    flex-direction: column;
+    padding: 80px 6%;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  /* LEFT SIDE */
+  .left {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .left h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .subText {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .productBox {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .note {
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  /* FORM */
+  .form {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 14px;
+  }
+
+  .form button {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .contactPage {
+    padding: 60px 5%;
+  }
+
+  .left h1 {
+    font-size: 24px;
+  }
+
+  .productBox {
+    font-size: 13px;
+  }
+
+  .form {
+    padding: 24px 16px;
+  }
+}

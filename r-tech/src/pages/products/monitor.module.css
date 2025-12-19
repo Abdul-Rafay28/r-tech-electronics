@@ -1,0 +1,171 @@
+.monitorBanner {
+    width: 100%;
+}
+
+.monitorBanner img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.monitorWrapper {
+    width: 100%;
+}
+
+.monitorWrapper h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.monitorContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 30px;
+}
+
+.monitorProduct {
+    background-color: black;
+    height: 300px;
+    text-align: center;
+    width: 400px;
+    padding: 40px;
+    margin: auto;
+    transition: transform 0.4s ease;
+    transform: scale(1);
+}
+
+.monitorProduct:hover{
+    transform: scale(1.05);
+}
+
+.monitorProduct img {
+    width: 200px;
+    
+}
+
+.monitorProduct p{
+    color: white;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.monitorHotWrapper {
+    width: 100%;
+}
+
+.monitorHotWrapper h1 {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.monitorHotContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+
+}
+
+.monitorHotImage {
+    width: 350px;
+    height: 630px;
+    background-color: rgb(207, 223, 218);
+    margin: auto;
+    transition: transform 0.4s ease;
+    transform: scale(1);
+}
+
+.monitorHotImage:hover {
+    transform: scale(1.05);
+}
+
+.monitorHotContainer img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.monitorHotContainer h4{
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.monitorHotContainer p {
+    font-size: 16px;
+    color: gray;
+    max-width: 220px;
+    margin-left: 60px;
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    /* Banner */
+    .monitorBanner img {
+        height: 260px;
+    }
+
+    /* Main heading */
+    .monitorWrapper h1,
+    .monitorHotWrapper h1 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    /* Product grid */
+    .monitorContainer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .monitorProduct {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .monitorProduct img {
+        width: 160px;
+    }
+
+    .monitorProduct p {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* HOT products */
+    .monitorHotContainer {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .monitorHotImage {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .monitorHotContainer img {
+        width: 220px;
+    }
+
+    .monitorHotContainer h4 {
+        font-size: 18px;
+    }
+
+    .monitorHotContainer p {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

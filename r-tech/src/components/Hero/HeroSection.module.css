@@ -1,0 +1,73 @@
+    .heroSection {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 30px;
+        background-color: #0A0F1F;
+        overflow: hidden;
+    }
+
+    .heroLeft {
+        width: 40%;
+        color: white;
+    }
+
+    .heroLeft h1 {
+        font-size: 44px;
+        font-weight: bold;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    
+    .heroLeft p {
+        font-size: 27px;
+        text-transform: capitalize;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+    .heroRight {
+        width: 60%;
+    }
+
+    @media (max-width: 760px) {
+
+        .heroSection {
+            flex-direction: column;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .heroLeft {
+            width: 100%;
+            margin-bottom: 25px;     /* ★ space add */
+        }
+
+        .heroLeft h1 {
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 15px;      /* ★ spacing */
+        }
+
+        .heroLeft p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;      /* ★ spacing */
+        }
+
+        .heroLeft button {
+            padding: 10px 25px;
+            font-size: 18px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .heroRight {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+

@@ -1,0 +1,51 @@
+.sliderContainer {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sliderWrapper {
+  width: 800px;  /* 👈 WIDTH kam kar di */
+  height: 600px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.25);
+  background: #0f1a2e;
+  position: relative;
+}
+
+/* BEST IMAGE FIT – NO STRETCH, NO EXTRA WIDTH */
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 👈 Perfect fill, NO stretch */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+
+@media (max-width: 760px) {
+  .sliderContainer {
+    width: 100%;
+    position: relative;
+    top: -190px;
+  }
+  .sliderWrapper {
+    width: 90%;
+    height: 260px;  
+  }
+
+  .slideImage {
+    object-fit: cover;
+  }
+}

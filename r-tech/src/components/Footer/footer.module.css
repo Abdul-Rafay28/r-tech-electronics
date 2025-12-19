@@ -1,0 +1,98 @@
+.footer {
+    background: #010c13;
+    color: white;
+    padding: 30px;
+}
+
+.desktopFooter {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+
+.desktopFooter h4 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.desktopFooter p {
+    margin: 6px 0;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.desktopFooter p:hover {
+  color: rgb(15, 53, 160);
+}
+
+.socialRow {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+}
+
+
+.socialRow i:hover {
+  color:rgb(15, 53, 160);;
+}
+
+.mobileFooter {
+    display: none; 
+}
+
+
+.mobileSocial {
+    display: flex;
+    gap: 18px;
+    font-size: 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.mobileFooter i:hover {
+  color: rgb(15, 53, 160);
+  
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 20px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.title span {
+    font-size: 24px;
+}
+
+.links {
+    padding: 10px 0 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.links p:hover {
+  color:rgb(15, 53, 160);;
+}
+
+
+.copy {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .desktopFooter {
+        display: none;
+    }
+    .mobileFooter {
+        display: block;
+    }
+}
