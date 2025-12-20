@@ -67,6 +67,18 @@ function GraphicCard() {
             spec: 'SUPRIM LIQUID OC',
             emailTitle: 'GeForce RTX 5080 16GB SUPRIM LIQUID OC Graphics Card',
             image: gpu8,
+        },
+        {
+            title: 'GeForce RTX 5080 16G',
+            spec: 'SUPRIM LIQUID OC',
+            emailTitle: 'GeForce RTX 5080 16GB SUPRIM LIQUID OC Graphics Card',
+            image: gpu7,
+        },
+        {
+            title: 'GeForce RTX 5080 16G',
+            spec: 'SUPRIM LIQUID OC',
+            emailTitle: 'GeForce RTX 5080 16GB SUPRIM LIQUID OC Graphics Card',
+            image: gpu8,
         }
     ];
 

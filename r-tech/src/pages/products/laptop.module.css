@@ -3,39 +3,36 @@
     position: relative;
 }
 
-/* Image container */
+/* ================= HERO ================= */
+
 .laptopImage {
     position: relative;
 }
 
-/* Laptop image */
 .laptopImage img {
     width: 100%;
     height: 750px;
-    object-fit: cover;
+    object-fit: cover;   /* hero = cover OK */
 }
 
 /* FULL IMAGE OVERLAY (ROG style) */
 .heading {
     position: absolute;
     inset: 0;
-    /* covers full image */
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding-left: 10%;
-
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.8) 0%,
-            rgba(0, 0, 0, 0.6) 40%,
-            rgba(0, 0, 0, 0.3) 70%,
-            rgba(0, 0, 0, 0) 100%);
-
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.3) 70%,
+        rgba(0, 0, 0, 0) 100%
+    );
     color: white;
 }
 
-/* Text styling */
 .heading h1 {
     font-size: 34px;
     font-weight: bold;
@@ -55,6 +52,8 @@
     line-height: 1.6;
 }
 
+/* ================= FEATURED PRODUCTS ================= */
+
 .laptopProducts {
     position: relative;
     bottom: 5px;
@@ -63,12 +62,10 @@
     padding: 80px 0;
 }
 
-/* TOP TEXT */
 .laptopText {
     color: white;
     text-align: center;
     margin-bottom: 60px;
-
 }
 
 .laptopText h1 {
@@ -84,7 +81,6 @@
     margin: 0 auto;
 }
 
-/* CARDS */
 .laptopContainer {
     display: flex;
     justify-content: center;
@@ -97,11 +93,11 @@
     background: transparent;
 }
 
-/* IMAGE */
+/* 🔥 FEATURED PRODUCT IMAGE FIX */
 .laptopCard img {
     width: 100%;
     height: 360px;
-    object-fit: cover;
+    object-fit: contain;   /* was cover → now safe */
     display: block;
 }
 
@@ -111,14 +107,22 @@
     padding: 25px 20px;
 }
 
-/* TITLE */
+.cardContent a {
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+
+.cardContent a:hover {
+    color: red;
+}
+
 .cardContent h2 {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* PARAGRAPH */
 .cardContent p {
     font-size: 15px;
     line-height: 1.6;
@@ -126,13 +130,13 @@
     color: #222;
 }
 
+/* ================= HOT PRODUCTS ================= */
+
 .laptopHotProduct {
     width: 100%;
     padding: 80px 60px;
     background: #ffffff;
-
 }
-
 
 .laptopHotProduct h1 {
     text-align: center;
@@ -149,7 +153,7 @@
 
 .hotPImage {
     width: 95%;
-    height: 600px;  
+    height: 600px;
     background-color: #fff;
     padding: 30px;
     border-radius: 20px;
@@ -159,9 +163,11 @@
     flex-direction: column;
 }
 
+/* 🔥 HOT PRODUCT IMAGE (already good, just lock rule) */
 .hotPImage img {
     width: 100%;
     max-width: 280px;
+    height: 220px;
     margin: 0 auto 20px;
     object-fit: contain;
 }
@@ -180,6 +186,21 @@
     font-weight: 400;
     text-transform: capitalize;
 }
+
+
+.hotPImage a {
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: blue;
+}
+
+.hotPImage a:hover {
+    color: red;
+}
+
+/* ================= NEW PRODUCTS ================= */
 
 .laptopNewProduct {
     width: 100%;
@@ -210,9 +231,11 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* 🔥 NEW PRODUCT IMAGE FIX */
 .newImage img {
     width: 100%;
     max-width: 280px;
+    height: 220px;
     margin: 0 auto 30px;
     object-fit: contain;
 }
@@ -223,6 +246,16 @@
     margin-bottom: 20px;
 }
 
+.newImage a {
+    text-decoration: none;
+    font-size: 20px;
+    color: blue;
+}
+
+.newImage a:hover {
+    color: red;
+}
+
 .newImage p {
     text-transform: capitalize;
     font-size: 20px;
@@ -230,13 +263,12 @@
     margin-bottom: 20px;
 }
 
-
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-    /* HERO IMAGE */
     .laptopImage img {
-        height: 420px;
+        height: 320px;
         object-fit: cover;
     }
 
@@ -258,7 +290,6 @@
         max-width: 100%;
     }
 
-    /* PRODUCTS TOP TEXT */
     .laptopText h1 {
         font-size: 28px;
     }
@@ -268,39 +299,56 @@
         padding: 0 15px;
     }
 
-    /* FEATURED CARDS */
     .laptopContainer {
         gap: 30px;
     }
 
     .laptopCard {
-        width: 90%;
+        width: 300px;
     }
 
+    /* 🔥 MOBILE FEATURED IMAGE */
     .laptopCard img {
         height: 260px;
+        object-fit: contain;
+    }
+
+    .cardContent {
+        height: 100px;
+        margin-bottom: 40px;
     }
 
     .cardContent h2 {
-        font-size: 20px;
+        font-size: 18px;
+        position: relative;
+        bottom: 20px;
     }
 
     .cardContent p {
-        font-size: 14px;
+        font-size: 12px;
+        position: relative;
+        bottom: 25px;
     }
 
-    /* HOT PRODUCTS */
+    .cardContent a {
+        position: relative;
+        bottom: 36px;
+    }
+
     .laptopHotProduct {
         padding: 60px 20px;
     }
 
     .hotPImage {
-        width: 100%;
+        width: 300px;
+        margin-left: 40px;
         height: auto;
     }
 
+    /* 🔥 MOBILE HOT IMAGE */
     .hotPImage img {
-        max-width: 220px;
+        height: 180px;
+        object-fit: contain;
     }
 
     .hotPImage h2 {
@@ -308,38 +356,30 @@
     }
 
     .hotPImage p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
-    .laptopPrice {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    /* NEW PRODUCTS */
     .laptopNewProduct {
         padding: 60px 20px;
     }
 
     .newImage {
-        width: 100%;
+        width: 350px;
         height: auto;
+        margin-left: 25px;
     }
 
+    /* 🔥 MOBILE NEW IMAGE */
     .newImage img {
-        max-width: 220px;
+        height: 160px;
+        object-fit: contain;
     }
 
     .newImage h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .newImage p {
-        font-size: 16px;
-    }
-
-    .newLaptopPrice {
-        justify-content: center;
-        margin-left: 0;
+        font-size: 12px;
     }
 }

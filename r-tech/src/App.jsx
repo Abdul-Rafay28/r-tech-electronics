@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import GraphicCard from './pages/products/Gpu';
 import MotherBoards from './pages/products/MontherBoard';
 import Monitors from './pages/products/Monitor';
-import NetWorking from './pages/products/NetWorking';
 import Colling from './pages/products/Coller';
 import Desktops from './pages/products/Desktop';
 import Contact from './pages/Contact';
@@ -27,7 +26,6 @@ function App() {
         <Route path='/products/motherboards' element={<MotherBoards />} />
         <Route path='/products/desktops/cases' element={<Desktops />} />
         <Route path='/products/monitors' element={<Monitors />} />
-        <Route path='/products/networkings' element={<NetWorking />} />
         <Route path='/products/cooling' element={<Colling />} />
 
       </Routes>

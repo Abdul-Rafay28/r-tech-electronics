@@ -1,3 +1,5 @@
+/* ================= HOT SECTION ================= */
+
 .HotWrapper {
     width: 100%;
     padding: 40px 0;
@@ -7,6 +9,8 @@
 .HotWrapper h1 {
     text-align: center;
     font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    color: white;
 }
 
 .HotContainer {
@@ -14,36 +18,50 @@
     justify-content: center;
     gap: 70px;
     text-align: center;
-    margin: auto;
     max-width: 1200px;
+    margin: auto;
     padding-top: 40px;
 }
 
 .HotImage {
+    background-color: rgb(146, 146, 157);
     padding: 20px;
-    background-color: #ffff;
-    background-color: #a5bcc4;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.HotImage a {
+    text-decoration: none;
+    font-size: 18px;
+    padding-top: 10px;
+    color: blue;
+}
+
+.HotImage a:hover {
+    color: red;
+}
+
+.HotImage img {
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .HotImage p {
-    display: inline-block;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 550;
     border-bottom: 4px solid black;
-
-
 }
 
-/* Chair Banner */
+/* ================= CHAIR BANNER ================= */
 
 .chairBanner {
     width: 100%;
     padding: 20px;
     text-align: center;
     background-color: rgb(12, 67, 99);
-
 }
 
 .chairBanner h1 {
@@ -61,26 +79,28 @@
 .chairContainer img {
     width: 80%;
     height: 550px;
-    margin-top: 40px;
     object-fit: cover;
     border-radius: 50px;
 }
 
+/* 🔥 TEXT LOCK */
 .bannerText {
-    color: white;
     position: absolute;
-    background-color: black;
     top: 40%;
     left: 12%;
+    background-color: black;
+    color: white;
+    padding: 14px 18px;
     font-size: 25px;
 }
 
 .bannerText p {
     font-size: 18px;
     color: darkgray;
-    position: relative;
-    right: 50px;
+    margin-top: 8px;
 }
+
+/* ================= SET CHAIRS ================= */
 
 .setChairWrapper {
     width: 100%;
@@ -93,45 +113,56 @@
 
 .setContainer {
     width: 28%;
-    background-color: white;
+    background-color: #9baaad;
     padding: 30px;
     border-radius: 10px;
     text-align: left;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #9baaad;
+    display: flex;
+    flex-direction: column;
+}
+
+.setContainer a {
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    color: blue;
+}
+
+.setContainer a:hover {
+    color: red;
 }
 
 .setContainer img {
-    width: 60%;
     height: 260px;
     object-fit: contain;
-    display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 
 .setContainer h5 {
     font-size: 22px;
     font-weight: bold;
-    margin-top: 20px;
 }
 
 .setContainer p {
-    margin-top: 10px;
+    margin-top: auto;          /* 🔥 text stable bottom */
     font-size: 15px;
     color: #444;
     line-height: 1.5;
 }
 
-.rTeckWrappper{
+/* ================= R-TECH BANNER ================= */
+
+.rTeckWrappper {
     position: relative;
     width: 100%;
-    top: -6px;
     color: white;
 }
 
 .rTeckWrappper img {
     width: 100%;
-    height: 600px;
+    height: 650px;
 }
 
 .Heading {
@@ -140,8 +171,11 @@
     left: 5%;
     font-size: 40px;
     font-weight: bold;
-    line-height: 60px;
-    
+    line-height: 1.3;
+}
+
+.Heading span {
+    font-size: 27px;
 }
 
 .rTechText {
@@ -152,205 +186,99 @@
 }
 
 .rTechText h3 {
-    position: relative;
-    bottom: 40px;
-    left: 15%;
     font-size: 25px;
     letter-spacing: 2px;
-
 }
 
-.rTechText p{
-    position: relative;
-    bottom: 35px;
-    left: 15%;
+.rTechText p {
     line-height: 1.3;
 }
 
+/* INPUT + BUTTON */
 .Heading input {
     width: 180px;
     height: 35px;
     background-color: transparent;
-    border: 2px solid #00E5FF;   /* neon blue */
-    font-size: 14px;
+    border: 2px solid #00E5FF;
     color: white;
-    font-weight: 500;
     padding-left: 10px;
-    border-radius: 4px;
-    transition: 0.3s ease;
 }
 
-.Heading input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-}
-
-.Heading input:focus {
-    outline: none;
-    box-shadow: 0 0 10px #00E5FF;
-    border-color: #00E5FF;
-}
-
-.Heading button ,input {
-    position: relative;
-    bottom: 20px;
-}
-
-
-/* BUTTON */
 .Heading button {
     width: 85px;
     height: 36px;
     background-color: transparent;
-    border: 2px solid #00E5FF;  /* same neon border */
+    border: 2px solid #00E5FF;
     color: white;
-    font-size: 15px;
     font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s ease;
 }
 
-/* Hover Glow */
-.Heading button:hover {
-    background-color: #00E5FF;
-    color: #000;
-    box-shadow: 0 0 12px #00E5FF;
-}
-
-.Heading span {
-    font-size: 27px;
-    text-transform: capitalize;
-    
-}
-
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-    .Heading span {
-        display: none;
-    }
-
-    .Heading input {
-        width: 200px;
-    }
-
-    .Heading input, button {
-        position: relative;
-        top: 5px;
-    }
-    .rTeckWrappper {
-        bottom: 20px;
-    }
-
-    .rTeckWrappper img {
-        height: 650px;
-        
-    }
-
-    .Heading {
-        position: absolute;
-        top: 70%;         /* lower */
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 19px;
-        line-height: 1.1;
-        text-align: center;
-        width: 100%;
-    }
-
-    .rTechText {
-        display: none;
-    }
     .HotContainer {
         flex-direction: column;
-        /* Image column me aa jayengi */
         gap: 30px;
-        /* Gap chota */
         padding: 20px;
     }
 
     .HotImage {
-        padding: 10px;
-        /* Card chota */
         max-width: 300px;
-        /* Mobile size me chota card */
         margin: auto;
-    }
-
-    .HotImage img {
-        width: 100%;
-        height: auto;
     }
 
     .HotWrapper h1 {
         font-size: 28px;
     }
-    
-    .setChairWrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 20px 0;
-    }
-
-    .setContainer {
-        width: 90%;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .setContainer img {
-        width: 70%;
-        height: 180px;
-        margin: 0 auto;
-    }
-
-    .setContainer h5 {
-        font-size: 18px;
-        margin-top: 15px;
-    }
-
-    .setContainer p {
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .chairBanner {
-        padding: 10px;
-    }
 
     .chairBanner h1 {
         font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    .chairContainer {
-        width: 100%;
     }
 
     .chairContainer img {
         width: 100%;
         height: 300px;
-        margin-top: 10px;
         border-radius: 25px;
-        object-fit: cover;
     }
 
     .bannerText {
-        background-color: black;
-        top: 12%;
+        top: 15%;
         left: 8%;
-        transform: translateY(-50%);
-        font-size: 13px;
+        font-size: 14px;
         max-width: 80%;
     }
 
-    .bannerText p {
-        font-size: 14px;
-        right: 0;
-        color: #ddd; /* mobile par dark gray dull lagta hai */
+    .setChairWrapper {
+        flex-direction: column;
+        gap: 20px;
     }
 
+    .setContainer {
+        width: 320px;
+        margin-left: 50px;
+    }
 
+    .setContainer h5 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .setContainer img {
+        height: 180px;
+    }
+
+    .Heading {
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 19px;
+        width: 100%;
+    }
+
+    .Heading span,
+    .rTechText {
+        display: none;
+    }
 }
