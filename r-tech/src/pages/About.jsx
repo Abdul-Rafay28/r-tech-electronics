@@ -1,5 +1,5 @@
 import Footer from '../components/Footer/Footer';
-import styles from './About.module.css';
+import styles from './about.module.css';
 
 function About() {
   return (
