@@ -95,7 +95,7 @@ function Colling() {
                             <h3>R-TECH RYUJIN</h3>
                             <p>Flagship</p>
                             <Link to={`/contact?product=${encodeURIComponent(emailTitle1)}`}>Get a Quote</Link>
-                        </div>
+                        </div>  
                     </div>
 
                     <div className={styles.coolingProduct}>

@@ -153,14 +153,17 @@
     .monitorContainer {
         grid-template-columns: 1fr;
         gap: 20px;
-        width: 400px;
-        margin-left: 20px;
+        width: 100%;
+        margin: auto;
+        justify-items: center;
+        padding: 16px 0;
     }
 
     .monitorProduct {
-        width: 90%;
-        height: auto;
-        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        padding: 16px 0;
     }
 
     .monitorProduct a {
@@ -181,16 +184,21 @@
 
     .monitorHotContainer {
         grid-template-columns: 1fr;
-        padding: 15px;
         gap: 25px;
-        width: 350px;
-        margin-left: 10%;
+        margin: auto;
+        padding: 16px 0;
     }
 
     .monitorHotImage {
-        width: 90%;
-        height: auto;
-        padding: 20px 0;
+       width: 100%;
+       max-width: 100%;
+       margin: auto;
+       height: auto;
+    }
+
+    .monitorHotImage a {
+        position: relative;
+        top: -3px;
     }
 
     /* 🔥 MOBILE HOT PRODUCT IMAGE */
@@ -204,9 +212,11 @@
     }
 
     .monitorHotContainer p {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 1.2;
-        max-width: 100%;
+        max-width: 400px;
         margin: 0 auto;
+        position: relative;
+        bottom: 10px;
     }
 }

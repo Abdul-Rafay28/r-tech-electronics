@@ -165,13 +165,18 @@
   .mBoardItem {
     grid-template-columns: 1fr;
     gap: 25px;
-    width: 300px;
-    margin-left: 70px;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 16px;
+    justify-items: center;
   }
 
   .mBoardImage {
-    width: 90%;
-    padding: 20px 0;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 16px 0;
   }
 
   .mBoardImage p {
@@ -196,17 +201,19 @@
 
   .mBoardHot {
     grid-template-columns: 1fr;
-    gap: 25px;
-    width: 300px;
-    margin-left: 17%;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    justify-items: center;
   }
 
   .mBoardHOtProduct {
-    width: 90%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    margin: auto;
-    padding: 20px 0;
-    margin-bottom: 40px;
+    margin: 0 auto 30px;
+    padding: 16px 0;
   }
 
   .mBoardHOtProduct a {
