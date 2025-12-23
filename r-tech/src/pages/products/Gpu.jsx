@@ -170,7 +170,7 @@ function GraphicCard() {
                                 <img src={gCard.image} alt="graphicCard Image" />
                                 <p>{gCard.title}</p>
                                 <p>{gCard.spec}</p>
-                                <Link to={`/contact?product-${encodeURIComponent(gCard.emailTitle)}`}>Go a Quote</Link>
+                                <Link to={`/contact?product=${encodeURIComponent(gCard.emailTitle)}`}>Go a Quote</Link>
                             </div>
                         ))
                     }
