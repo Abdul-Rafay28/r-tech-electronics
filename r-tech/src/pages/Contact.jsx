@@ -6,17 +6,60 @@ function Contact() {
     const location = useLocation();
     const product = new URLSearchParams(location.search).get("product");
 
+
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        product: product || '',
+        name: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+        product: product || "",
     });
 
+    const [error, setError] = useState('');
+
+    const [success, setSuccess] = useState('');
+
+    const [loading, setLoading] = useState(false);
 
     const handleForm = async (e) => {
         e.preventDefault();
+        setLoading(true);
+        setError('');
+        setSuccess('');
+        try {
+
+            const url = "http://localhost:4400/r-tech/contact-form";
+            const formRes = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            const res = await formRes.json();
+            if (!res.success) {
+                setError(res.message)
+                return;
+            }
+            if (res.success) {
+                setFormData({
+                    name: "",
+                    email: "",
+                    phoneNumber: "",
+                    message: "",
+                    product: "",
+                });
+                setSuccess(res.message)
+            }
+
+        } catch (error) {
+            alert('Something went wrong please try again later!')
+        } finally {
+            setTimeout(() => {
+                setLoading(false);
+            }, 2000)
+
+        }
     }
 
     return (
@@ -62,18 +105,36 @@ function Contact() {
             </div>
 
             {/* RIGHT SIDE FORM */}
-            <form onSubmit={handleForm} className={styles.form}>
-                <input type="text" required onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" />
-                <input type="email" required onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Your Email" />
+            <form onSubmit={handleForm} className={styles.form} noValidate >
+                {
+                    success && <span className={styles.resMessageSucc}>{success}</span>
+                }
+                {
+                    success && <span className={styles.emailMessage}>If you don’t see this email in your inbox, please check All Inboxes, Spam or Promotions.</span>
+                }
+                <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Your Name" />
+                {
+                    error && !formData.name && <span className={styles.resMessageErr}>{error}</span>
+                }
+                <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Your Email" />
+                {
+                    error && !formData.email && <span className={styles.resMessageErr}>{error}</span>
+                }
 
                 {product && (
                     <input type="text" value={formData.product} readOnly />
                 )}
+                {
+                    error && !formData.product && <span className={styles.resMessageErr}>{error}</span>
+                }
 
-                <input type="text" required onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="Phone Number" />
-                <textarea placeholder="Your Message (optional)" onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows="5"></textarea>
+                <input type="text" value={formData.phoneNumber} onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })} placeholder="Phone Number" />
+                {
+                    error && !formData.phoneNumber && <span className={styles.resMessageErr}>{error}</span>
+                }
+                <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="Your Message (optional)" rows="5"></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit" disabled={loading}>{loading ? "Sending..." : 'SendMessage'}</button>
             </form>
 
         </div>

@@ -9,7 +9,7 @@
 /* SLIDER WRAPPER */
 .sliderWrapper {
   width: 800px;
-  height: 420px;                 /* 🔥 match parent */
+  height: 620px;                 /* 🔥 match parent */
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 170, 255, 0.25);
