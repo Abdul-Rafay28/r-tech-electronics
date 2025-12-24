@@ -10,27 +10,27 @@ import Desktops from './pages/products/Desktop';
 import Contact from './pages/Contact';
 import About from './pages/About';
 
-
-
 function App() {
-
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/products/laptops' element={<Laptops />} />
-        <Route path='/products/gpus' element={<GraphicCard />} />
-        <Route path='/products/motherboards' element={<MotherBoards />} />
-        <Route path='/products/desktops/cases' element={<Desktops />} />
-        <Route path='/products/monitors' element={<Monitors />} />
-        <Route path='/products/cooling' element={<Colling />} />
 
-      </Routes>
+      {/* ✅ FIX: wrapper added */}
+      <div style={{ paddingTop: '60px' }}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/products/laptops' element={<Laptops />} />
+          <Route path='/products/gpus' element={<GraphicCard />} />
+          <Route path='/products/motherboards' element={<MotherBoards />} />
+          <Route path='/products/desktops/cases' element={<Desktops />} />
+          <Route path='/products/monitors' element={<Monitors />} />
+          <Route path='/products/cooling' element={<Colling />} />
+        </Routes>
+      </div>
     </>
-  )
+  );
 }
 
 export default App;
